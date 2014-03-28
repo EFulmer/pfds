@@ -1,7 +1,7 @@
 let rec suffixes xs =
   match xs with
-  | x :: xs2 -> xs :: (suffixes xs2)
-  | [] -> [[]]
+  | []      -> []
+  | x :: xs -> xs :: (suffixes xs)
 
 let suffixes_tail xs =
   let rec aux xs suffs = 
